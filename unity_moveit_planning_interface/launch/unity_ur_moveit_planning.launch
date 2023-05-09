@@ -1,0 +1,41 @@
+<!-- Telepatia Digital Twin -->
+<launch>
+    <arg name="sim" default="false"/>
+    <arg name="robot_ip" default="192.168.1.201"/>
+    <arg name="tool_ip" default="192.168.1.1"/>
+    <arg name="robot_model" default="ur10e"/>
+    <arg name="tool_model" default="rg2"/>
+
+    <arg name="unity_tcp_ip" default="0.0.0.0"/>
+    <arg name="unity_tcp_port" default="10000"/>
+    
+    <!-- Unity TCP Server -->
+    <include file="$(find ros_tcp_endpoint)/launch/endpoint.launch">
+        <param name="tcp_ip" type="string" value="$(arg unity_tcp_ip)"/>
+        <param name="tcp_port" type="int" value="$(arg unity_tcp_port)"/>
+    </include>
+    
+    <!-- Using with simulated robot -->
+    <group if="$(arg sim)">
+        <!-- Open Simulated Robot -->
+        <include file="$(find ur_gazebo)/launch/ur10e_bringup.launch"/>
+        
+        <!-- Moveit planning -->
+        <include file="$(find ur10e_moveit_config)/launch/moveit_planning_execution.launch">
+            <arg name="sim" value="$(arg sim)"/>
+        </include>
+    </group>
+
+    <group if="$(eval arg('sim')==false)">
+        <!-- Connect to robot -->
+        <include file="$(find ur_robot_driver)/launch/ur10e_bringup.launch">
+            <arg name="robot_ip" value="$(arg robot_ip)"/>
+        </include>
+
+        <!-- Moveit planning -->
+        <include file="$(find ur10e_moveit_config)/launch/moveit_planning_execution.launch"/>
+    </group>
+
+    <!-- <node pkg="unity_moveit_planning_interface" type="ur_move_group_planning.py" name="ur_move_group_planner" output="screen">
+    </node> -->
+</launch>
