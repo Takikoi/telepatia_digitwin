@@ -6,7 +6,7 @@ This project uses a number of tools:
 - Unity: design GUI and control physics-based behaviors to virtual robot
 - Mongodb: data storing and processing
 - WISE-PaaS IoTSuite: monitoring dashboard
-- 
+
 *Thís repo contains packages for using in ROS only. Follow the instruction to install other related repos from Telepatia
 
 ## Demo
