@@ -7,10 +7,10 @@ This project uses a number of tools:
 - Mongodb: data storing and processing
 - WISE-PaaS IoTSuite: monitoring dashboard
 
-*Thís repo contains packages for using in ROS only. Follow the instruction to install other related repos from Telepatia
+*This repo contains packages for using in ROS only. Follow the instruction to install other related repos from Telepatia
 
 ## Demo
-### Setup
+### Setup for ROS
 - Create catkin workspace: `mkdir -p catkin_ws/src && cd catkin_ws`
 
 - Follow Moveit setup tutorial: [Moveit Getting Started](http://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html "Moveit Getting Started") and [Moveit MoveGroup Demo](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html "Moveit MoveGroup Demo")
@@ -27,3 +27,9 @@ This project uses a number of tools:
 
 - Build & activate the packages: `catkin_make && source devel/setup.bash`
 
+### Setup for Unity
+- Clone digital twin unity repo outside catkin workspace: `git clone https://github.com/Takikoi/Telepatia_Unity_Digitwin.git`
+- Open UnityHub, add and open this unity project.
+
+### Reference
+- [Unity Robotic Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub "Unity Robotic Hub")
