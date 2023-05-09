@@ -17,7 +17,7 @@ This project uses a number of tools:
 
 - Install driver for Universal Robot and follow [driver setup](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver "driver setup") tutorial: `git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver`
 
-- Install driver for OnRobot Gripper and follow [driver setup](https://github.com/Osaka-University-Harada-Laboratory/onrobot.git "driver setup") tutorial: `git clone https://github.com/Osaka-University-Harada-Laboratory/onrobot.git`
+- Install driver for OnRobot Gripper and follow [driver setup](https://github.com/Osaka-University-Harada-Laboratory/onrobot.git "driver setup") tutorial: `git clone https://github.com/Osaka-University-Harada-Laboratory/onrobot.git src/onrobot`
 
 - Install Universal Robot description: `git clone -b melodic-devel https://github.com/ros-industrial/universal_robot.git src/universal_robot`
 
