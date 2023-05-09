@@ -21,6 +21,6 @@ This project uses a number of tools:
 
 - Install ROS-TCP-Endpoint (for connecting to Unity): `git clone https://github.com/Unity-Technologies/ROS-TCP-Endpoint src/ros_tcp_endpoint`
 
-- Clone this repo: `git clone https://github.com/Unity-Technologies/ROS-TCP-Endpoint src/ros_tcp_endpoint`
+- Clone this repo: `git clone https://github.com/Takikoi/telepatia_digitwin.git src/telepatia_digitwin`
 
 - Build & activate the packages: `catkin_make && source devel/setup.bash`
